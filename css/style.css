@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+    font-family: 'Gemunu Libre', sans-serif;
+    line-height: 1.7;
+}
+
+.header {
+    height: 95vh;
+    background-image:linear-gradient(to bottom right,#d69754a6,#81371a8a)
+    , url('../image/pexels-lina-kivaka-1585893.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    position: relative;
+}
+
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.text-box h1 {
+    text-transform: uppercase;
+}
+
+.heading-main {
+    display: block;
+    font-size: 5rem;
+    animation-name: moveInleft;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInleft {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.heading-sub {
+    display: block;
+    font-size: 2rem;
+    animation-name: moveInright;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInright {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn-container {
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btn {
+    display: block;
+    color: honeydew;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1px 4px;
+    border-radius: 10%;
+    background-color: #e47e0a;
+    animation-name: btn;
+    animation-duration: 4s;
+}
+
+@keyframes btn {
+    0% {
+        font-size: 0rem;
+        opacity: 0;
+        transform: translateY(500px);
+    }
+    100% {
+        font-size: 2rem;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
